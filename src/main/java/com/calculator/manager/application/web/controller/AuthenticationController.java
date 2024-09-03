@@ -49,6 +49,17 @@ public class AuthenticationController {
 		}
 	}
 
+	@GetMapping("/check")
+	public ResponseEntity<?> checkToken() {
+		try {
+			logger.info("Checking if token is valid");
+			return ResponseEntity.ok("");
+		} catch (Exception ex) {
+			logger.error("Error invalid token");
+			throw ex;
+		}
+	}
+
 	@PostMapping("/sign-out")
 	public ResponseEntity<?> signOut() {
 		try {

@@ -35,7 +35,7 @@ class AuthenticationControllerTest {
     private ITokenService tokenService;
 
     @Test
-    void login_ShouldReturnToken_WhenCredentialsAreValid() throws Exception {
+    void login_ShouldReturnToken_WhenCredentialsAreValid() {
         Login login = new Login();
         login.setUsername("user");
         login.setPassword("password");
@@ -54,7 +54,7 @@ class AuthenticationControllerTest {
     }
 
     @Test
-    void login_ShouldThrowException_WhenAuthenticationFails() throws Exception {
+    void login_ShouldThrowException_WhenAuthenticationFails() {
         Login login = new Login();
         login.setUsername("user");
         login.setPassword("password");
@@ -67,7 +67,7 @@ class AuthenticationControllerTest {
     }
 
     @Test
-    void signOut_ShouldReturnOk_WhenSignOutIsSuccessful() throws Exception {
+    void signOut_ShouldReturnOk_WhenSignOutIsSuccessful() {
         Long userId = 1L;
 
         when(tokenService.retrieve(request)).thenReturn("token");

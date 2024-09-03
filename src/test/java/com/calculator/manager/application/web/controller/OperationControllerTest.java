@@ -45,7 +45,7 @@ class OperationControllerTest {
         Long userId = 1L;
         when(tokenService.retrieve(request)).thenReturn("token");
         when(tokenService.getUserId("token")).thenReturn(userId);
-        when(operationService.operation(userId, operationFields)).thenReturn("15.0");
+        when(operationService.realizeOperation(userId, operationFields)).thenReturn("15.0");
 
         ResponseEntity<?> response = operationController.saveOperation(operationFields);
 
@@ -64,13 +64,13 @@ class OperationControllerTest {
         Long userId = 1L;
         when(tokenService.retrieve(request)).thenReturn("token");
         when(tokenService.getUserId("token")).thenReturn(userId);
-        when(operationService.operation(userId, operationFields)).thenThrow(new RuntimeException("Operation failed"));
+        when(operationService.realizeOperation(userId, operationFields)).thenThrow(new RuntimeException("Operation failed"));
 
         Exception exception = assertThrows(RuntimeException.class, () -> operationController.saveOperation(operationFields));
         assertEquals("Operation failed", exception.getMessage());
         verify(tokenService).retrieve(request);
         verify(tokenService).getUserId("token");
-        verify(operationService).operation(userId, operationFields);
+        verify(operationService).realizeOperation(userId, operationFields);
     }
 
     @Test

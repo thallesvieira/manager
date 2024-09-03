@@ -53,7 +53,7 @@ public class OperationServiceImpl implements IOperationService {
      * @return String with response of operation
      */
     @Override
-    public String operation(Long userId, OperationFields operationFields) {
+    public String realizeOperation(Long userId, OperationFields operationFields) {
         logger.info("Realize validation to operation: {}", operationFields.getType());
         operationValidation.validate(operationFields);
 

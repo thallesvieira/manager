@@ -41,6 +41,9 @@ public class WalletRepositoryImpl implements IWalletRepository {
         logger.info("Getting wallet entity by user id: {}", userId);
         Optional<UserEntity> userEntity = userJPARepository.findById(userId);
 
+        if (userEntity.isEmpty())
+            throw new ExceptionResponse("User not found!", HttpStatus.NOT_FOUND);
+
         logger.info("Convert wallet entity to model");
         return walletJPARepository.findByUser(userEntity.get())
                 .map(entity-> mapper.map(entity, Wallet.class))

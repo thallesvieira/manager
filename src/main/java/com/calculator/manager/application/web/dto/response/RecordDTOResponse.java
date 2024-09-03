@@ -25,7 +25,7 @@ public class RecordDTOResponse {
         recordDTOResponse.setAmount(Utils.getCurrencyValue(record.getAmount()));
         recordDTOResponse.setBalance(Utils.getCurrencyValue(record.getUserBalance()));
         recordDTOResponse.setResponse(record.getOperationResponse());
-        recordDTOResponse.setDate(record.getDate().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")));
+        recordDTOResponse.setDate(record.getDate().format(DateTimeFormatter.ofPattern("MM/dd/yyyy HH:mm:ss")));
         recordDTOResponse.setInactive(record.getInactive());
 
         return recordDTOResponse;

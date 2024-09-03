@@ -40,6 +40,10 @@ INSERT INTO users(username, password, status) VALUES ('user3@user.com', '$2a$10$
 INSERT INTO users(username, password, status) VALUES ('user4@user.com', '$2a$10$rFXuhNxdgaaihLRJwjDs1uIwnzuQE95ovnNrOMERY4Db4szvCXJ1u', 'ACTIVE');
 INSERT INTO users(username, password, status) VALUES ('user5@user.com', '$2a$10$rFXuhNxdgaaihLRJwjDs1uIwnzuQE95ovnNrOMERY4Db4szvCXJ1u', 'ACTIVE');
 INSERT INTO users(username, password, status) VALUES ('user6@user.com', '$2a$10$rFXuhNxdgaaihLRJwjDs1uIwnzuQE95ovnNrOMERY4Db4szvCXJ1u', 'ACTIVE');
+INSERT INTO users(username, password, status) VALUES ('user7@user.com', '$2a$10$rFXuhNxdgaaihLRJwjDs1uIwnzuQE95ovnNrOMERY4Db4szvCXJ1u', 'ACTIVE');
+INSERT INTO users(username, password, status) VALUES ('user8@user.com', '$2a$10$rFXuhNxdgaaihLRJwjDs1uIwnzuQE95ovnNrOMERY4Db4szvCXJ1u', 'ACTIVE');
+INSERT INTO users(username, password, status) VALUES ('user9@user.com', '$2a$10$rFXuhNxdgaaihLRJwjDs1uIwnzuQE95ovnNrOMERY4Db4szvCXJ1u', 'ACTIVE');
+INSERT INTO users(username, password, status) VALUES ('user10@user.com', '$2a$10$rFXuhNxdgaaihLRJwjDs1uIwnzuQE95ovnNrOMERY4Db4szvCXJ1u', 'ACTIVE');
 
 -- Charge Operation table
 INSERT INTO operation(type, cost) VALUES ('ADDITION', 30.0);
@@ -56,3 +60,7 @@ INSERT INTO wallet(user_id, balance) VALUES (3, 0.0);
 INSERT INTO wallet(user_id, balance) VALUES (4, 10000.0);
 INSERT INTO wallet(user_id, balance) VALUES (5, 2000.0);
 INSERT INTO wallet(user_id, balance) VALUES (6, 5000.0);
+INSERT INTO wallet(user_id, balance) VALUES (7, 8000.0);
+INSERT INTO wallet(user_id, balance) VALUES (8, 15000.0);
+INSERT INTO wallet(user_id, balance) VALUES (9, 3000.0);
+INSERT INTO wallet(user_id, balance) VALUES (10, 2000.0);

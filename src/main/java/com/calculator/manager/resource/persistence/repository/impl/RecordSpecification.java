@@ -47,7 +47,7 @@ public class RecordSpecification implements Specification<RecordEntity> {
             String likePattern = "%" + search.toLowerCase() + "%";
 
             logger.info("Create filter by search {} verify operations type", search);
-            predicate = criteriaBuilder.or(predicate,
+            predicate = criteriaBuilder.and(predicate,
                     criteriaBuilder.like(criteriaBuilder.lower(root.get("operation").get("type")), likePattern));
 
             logger.info("Create filter by search {} verify operations response", search);

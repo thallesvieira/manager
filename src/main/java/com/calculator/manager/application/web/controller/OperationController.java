@@ -42,7 +42,7 @@ public class OperationController {
         try {
             Long userId = tokenService.getUserId(tokenService.retrieve(request));
             logger.info("User trying  to realize a new operation");
-            return ResponseEntity.ok(operationService.operation(userId, operationFields));
+            return ResponseEntity.ok(operationService.realizeOperation(userId, operationFields));
         } catch (Exception ex) {
             logger.error("Error to realize a new operation");
             throw ex;
