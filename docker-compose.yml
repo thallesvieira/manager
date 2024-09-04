@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  web:
+    image: thallesjacobs/manager:latest
+    ports:
+      - "8080:8080"
+    environment:
+      DATABASE_URL: jdbc:postgresql://db:5432/calculator
+      DATABASE: postgres
+      DATABASE_PASSWORD: 123
+      RANDOM_STRING_URL: https://www.random.org
+    depends_on:
+      - db
+
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: calculator
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+    ports:
+      - "5432:5432"
