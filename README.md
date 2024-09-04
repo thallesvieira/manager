@@ -1,6 +1,14 @@
 # manager-service
-operations manager
 
+## You have 2 options to run this project:
+### 1- Run the project with docker:
+Inside of manager project, run docker-compose up --build
+
+The API will run in http://localhost:8080/
+
+You can access de swagger: http://localhost:8080/swagger-ui/index.html
+
+### 2- Run the project local:
 To run the project, you will need the following variables:
 
 * DATABASE_URL - the path to your database
@@ -13,8 +21,7 @@ Example:
 * DATABASE_URL=jdbc:postgresql://localhost:5432/calculator
 * DATABASE=postgres
 * DATABASE_PASSWORD=123
-
-
+##
 ## For testing purposes, there are 10 users created.
 ### The usernames for logging in are:
 * user1@user.com
