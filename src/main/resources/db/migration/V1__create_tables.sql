@@ -55,12 +55,12 @@ INSERT INTO operation(type, cost) VALUES ('RANDOM_STRING', 235.35);
 
 -- Charge wallet table
 INSERT INTO wallet(user_id, balance) VALUES (1, 1000.0);
-INSERT INTO wallet(user_id, balance) VALUES (2, 500.0);
-INSERT INTO wallet(user_id, balance) VALUES (3, 0.0);
-INSERT INTO wallet(user_id, balance) VALUES (4, 10000.0);
-INSERT INTO wallet(user_id, balance) VALUES (5, 2000.0);
+INSERT INTO wallet(user_id, balance) VALUES (2, 0.0);
+INSERT INTO wallet(user_id, balance) VALUES (3, 2000.0);
+INSERT INTO wallet(user_id, balance) VALUES (4, 3000.0);
+INSERT INTO wallet(user_id, balance) VALUES (5, 5000.0);
 INSERT INTO wallet(user_id, balance) VALUES (6, 5000.0);
-INSERT INTO wallet(user_id, balance) VALUES (7, 8000.0);
-INSERT INTO wallet(user_id, balance) VALUES (8, 15000.0);
-INSERT INTO wallet(user_id, balance) VALUES (9, 3000.0);
-INSERT INTO wallet(user_id, balance) VALUES (10, 2000.0);
+INSERT INTO wallet(user_id, balance) VALUES (7, 10000.0);
+INSERT INTO wallet(user_id, balance) VALUES (8, 50000.0);
+INSERT INTO wallet(user_id, balance) VALUES (9, 100000.0);
+INSERT INTO wallet(user_id, balance) VALUES (10, 1000000.0);
